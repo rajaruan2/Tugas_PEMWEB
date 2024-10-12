@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas PEMWEb</title>
+    <style>
+        
+    
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #100056;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: rgb(0, 69, 119);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgb(255, 255, 255);
+            max-width: 800px;
+            width: 100%;
+            text-align: left;
+        }
+
+        h2 {
+            margin-bottom: 24px;
+            color: #fcfcfc;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            color: #ffffff;
+            text-align: left;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #4285F4;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+        }
+
+        button:hover {
+            background-color: #357ae8;
+        }
+
+        .required {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Google Form Style - 12 Pertanyaan</h2>
+        <form id="google-form" action="#" method="POST">
+          
+            <div class="form-group">
+                <label for="name">Nama Lengkap <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+           
+            <div class="form-group">
+                <label for="phone">No. Telepon</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+           
+            <div class="form-group">
+                <label for="date">Tanggal Lahir</label>
+                <input type="date" id="date" name="date">
+            </div>
+
+           
+            <div class="form-group">
+                <label for="gender">Jenis Kelamin <span class="required">*</span></label>
+                <select id="gender" name="gender" required>
+                    <option value="">Pilih Jenis Kelamin</option>
+                    <option value="male">Laki-laki</option>
+                    <option value="female">Perempuan</option>
+                </select>
+            </div>
+
+            
+            <div class="form-group">
+                <label>Apakah Anda Bekerja?</label>
+                <input type="radio" id="yes" name="work" value="yes">
+                <label for="yes">Ya</label>
+                <input type="radio" id="no" name="work" value="no">
+                <label for="no">Tidak</label>
+            </div>
+
+          
+            <div class="form-group">
+                <label for="job">Pekerjaan Saat Ini</label>
+                <input type="text" id="job" name="job" placeholder="Masukkan pekerjaan Anda">
+            </div>
+
+          
+            <div class="form-group">
+                <label for="education">Tingkat Pendidikan <span class="required">*</span></label>
+                <select id="education" name="education" required>
+                    <option value="">Pilih Tingkat Pendidikan</option>
+                    <option value="sd">SD</option>
+                    <option value="smp">SMP</option>
+                    <option value="sma">SMA</option>
+                    <option value="s1">S1</option>
+                    <option value="s2">S2</option>
+                    <option value="s3">S3</option>
+                </select>
+            </div>
+
+          
+            <div class="form-group">
+                <label>Hobi yang Anda Sukai</label>
+                <input type="checkbox" id="hobi1" name="hobby" value="membaca">
+                <label for="hobi1">Membaca</label>
+                <input type="checkbox" id="hobi2" name="hobby" value="olahraga">
+                <label for="hobi2">Olahraga</label>
+                <input type="checkbox" id="hobi3" name="hobby" value="menonton film">
+                <label for="hobi3">Menonton Film</label>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">Feedback atau Komentar</label>
+                <textarea id="feedback" name="feedback" rows="4" placeholder="Masukkan feedback Anda di sini..."></textarea>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="reason">Alasan Mengisi Form Ini <span class="required">*</span></label>
+                <input type="text" id="reason" name="reason" required>
+            </div>
+
+          
+            <div class="form-group">
+                <label for="comments">Komentar Tambahan</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Masukkan komentar tambahan di sini..."></textarea>
+            </div>
+
+          
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('google-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Form submitted!');
+        });
+    </script>
+</body>
+</html>
